@@ -1,19 +1,21 @@
 import { useState } from "react";
 import "./App.css";
+import { FaUser } from "react-icons/fa";
 
 function App() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [rememberMe, setRememberMe] = useState(false);
 
-  const handleLogin = () => {
-    alert(
+  const handleSignIn = () => {
+    console.log(
       `Username: ${username}, Password: ${password}, Remember Me: ${rememberMe}`
     );
   };
 
   return (
     <div className="app">
+      <FaUser />
       <input
         type="text"
         placeholder="Username"
@@ -32,9 +34,10 @@ function App() {
         onChange={(e) => setRememberMe(e.target.checked)}
       />
       <label>Remember me</label>
-      <button onClick={handleLogin} disabled={!username || !password}>
+      <button onClick={handleSignIn} disabled={!username || !password}>
         Sign in
       </button>
+      <a href="#">Forgot password?</a>
     </div>
   );
 }
