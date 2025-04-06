@@ -1,3 +1,142 @@
-h1 {
-  color: aqua;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+
+.app {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  margin-top: 6rem;
+}
+
+.circles_container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.circle_1 {
+  position: absolute;
+  top: -90px;
+  right: 200px;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: #65bcff;
+  z-index: 0;
+}
+
+.circle_2 {
+  position: absolute;
+  top: -200px;
+  left: 150px;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background-color: #7377ff;
+  z-index: -1;
+}
+
+.icon {
+  width: 7rem;
+  height: 7rem;
+  padding: 0.8rem;
+  border-radius: 50%;
+  background-color: #40a7ff;
+  color: #fff;
+  font-size: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.container_text_input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.text_input {
+  background-color: #7377fd;
+  color: white;
+  border: none;
+  border-radius: 0.8rem;
+  width: 18rem;
+  height: 3rem;
+  text-align: center;
+  margin: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.text_input::placeholder {
+  color: white;
+  opacity: 1;
+}
+
+.text_input:-ms-input-placeholder {
+  color: white;
+}
+
+.text_input::-ms-input-placeholder {
+  color: white;
+}
+
+.container_remember_me {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: auto;
+  padding-bottom: 5rem;
+}
+
+.checkbox {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 0.5rem;
+  color: #40a7ff;
+}
+
+.label_remember_me {
+  width: auto;
+  height: auto;
+  color: #40a7ff;
+  font-size: 1rem;
+}
+
+.sign_in_button {
+  border: none;
+  background-color: #40a7ff;
+  color: white;
+  border-radius: 0.8rem;
+  width: 14rem;
+  height: 3rem;
+  font-size: 1.5rem;
+}
+
+.forgot_password {
+  color: #40a7ff;
+  font-size: 0.8rem;
+  text-decoration: none;
+  margin-top: 0.5rem;
+  text-align: center;
 }

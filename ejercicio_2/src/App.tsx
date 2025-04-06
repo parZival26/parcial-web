@@ -15,29 +15,48 @@ function App() {
 
   return (
     <div className="app">
-      <FaUser />
-      <input
-        type="text"
-        placeholder="Username"
-        value={username}
-        onChange={(e) => setUsername(e.target.value)}
-      />
-      <input
-        type="password"
-        placeholder="Password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-      />
-      <input
-        type="checkbox"
-        checked={rememberMe}
-        onChange={(e) => setRememberMe(e.target.checked)}
-      />
-      <label>Remember me</label>
-      <button onClick={handleSignIn} disabled={!username || !password}>
+      <div className="circles_container">
+        <div className="circle_1"></div>
+        <div className="circle_2"></div>
+      </div>
+      <div className="icon">
+        <FaUser />
+      </div>
+      <div className="container_text_input">
+        <input
+          className="text_input"
+          type="text"
+          placeholder="Username"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+        />
+        <input
+          className="text_input"
+          type="password"
+          placeholder="Password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+      </div>
+      <div className="container_remember_me">
+        <input
+          className="checkbox"
+          type="checkbox"
+          checked={rememberMe}
+          onChange={(e) => setRememberMe(e.target.checked)}
+        />
+        <label className="label_remember_me">Remember me</label>
+      </div>
+      <button
+        className="sign_in_button"
+        onClick={handleSignIn}
+        disabled={!username || !password}
+      >
         Sign in
       </button>
-      <a href="#">Forgot password?</a>
+      <a className="forgot_password" href="#">
+        Forgot password?
+      </a>
     </div>
   );
 }
